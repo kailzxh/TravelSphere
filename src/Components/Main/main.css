@@ -1,0 +1,303 @@
+/* # sourceMappingURL=main.css.map */
+/* :root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-dark-color: #10121A;
+    --background-dark-grey: #191D2B;
+    --border-color: #2e344e;
+    --background-light-color: #F1F1F1;
+    --background-light-color-2: rgba(3, 127, 255, 0.3);
+    --white-color: #FFF;
+    --font-light-color: #a4acc4;
+    --font-dark-color: #313131;
+    --font-dark-color-2: #151515;
+    --sidebar-dark-color: #191D2B;
+    --scrollbar-bg-color: #383838;
+    --scrollbar-thumb-color: #6b6b6b;
+    --scrollbar-width: 12px;
+    --gradient-color: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(3, 127, 255, 1) 100%);
+    --body-color: #ffffff;
+}
+
+.main {
+    width: 100%;
+}
+
+.secTitle .title {
+    position: relative;
+    width: max-content;
+    color: var(--font-light-color);
+    margin: 1rem 0;
+    z-index: 2;
+}
+
+.secTitle .title::after {
+    position: absolute;
+    content: '';
+    background: var(--secondary-color);
+    height: 5px;
+    width: 120px;
+    right: 0;
+    bottom: 5px;
+    z-index: -1;
+}
+
+.secContent {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.singleDestination {
+    background: var(--background-light-color);
+    box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: 0.3s ease-in-out;
+}
+
+.singleDestination:hover {
+    background: var(--background-light-color-2);
+    box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+}
+
+.imageDiv {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.imageDiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+}
+
+.imageDiv:hover img {
+    transform: scale(1.1);
+}
+
+.cardInfo {
+    padding: 1rem;
+}
+
+.destTitle {
+    color: var(--font-dark-color);
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.fees {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-top: 1.5px solid var(--border-color);
+    border-bottom: 1.5px solid var(--border-color);
+}
+
+.grade {
+    color: var(--font-light-color);
+    display: flex;
+    align-items: center;
+}
+
+.grade small {
+    background: var(--gradient-color);
+    border-radius: 1rem;
+    color: var(--white-color);
+    padding: 3px 10px;
+    font-size: 10px;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: var(--font-dark-color-2);
+}
+
+.desc {
+    font-size: 14px;
+    color: var(--font-light-color);
+    font-weight: 500;
+}   */
+
+
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --border-color: #dee2e6;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --white-color: #fff;
+    --font-light-color: #6c757d;
+    --font-dark-color: #212529;
+    --gradient-color: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(3, 127, 255, 1) 100%);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    width: 100%;
+    padding: 2rem;
+}
+
+.secTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.secTitle .title {
+    color: var(--font-dark-color);
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.secTitle .title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 5px auto 0;
+}
+
+.secContent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.singleDestination {
+    background: var(--white-color);
+    box-shadow: 0 4px 8px var(--box-shadow-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.singleDestination:hover {
+    transform: translateY(-5px);
+}
+
+.imageDiv {
+    height: 200px;
+    overflow: hidden;
+}
+
+.imageDiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imageDiv:hover img {
+    transform: scale(1.05);
+}
+
+.cardInfo {
+    padding: 1rem;
+    text-align: center;
+}
+
+.destTitle {
+    color: var(--font-dark-color);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.fees {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--font-dark-color);
+}
+
+.grade {
+    background: var(--gradient-color);
+    padding: 3px 10px;
+    border-radius: 15px;
+    color: var(--white-color);
+    font-size: 0.9rem;
+}
+
+.price {
+    color: var(--font-dark-color);
+    font-size: 1.2rem;
+}
+
+.desc {
+    font-size: 1rem;
+    color: var(--font-light-color);
+    margin: 1rem 0;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+}
+
+
+@media screen and (min-width:500px) {
+    .title{
+        font-size: 1.5rem;
+        &::after{
+            width: 155px !important;
+        }
+    }
+
+    .secContent{
+        grid-template-columns: repeat(2,1fr);
+
+        .singleDestination{
+            height: auto;
+        }
+    }
+    
+}
+
+
+@media screen and (min-width:840px){
+    .secContent{
+        grid-template-columns: repeat(3,1fr);
+        .singleDestination{
+            height: auto;
+        }
+    }
+
+}

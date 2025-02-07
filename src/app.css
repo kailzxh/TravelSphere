@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-dark-color: #10121A;
+    --background-dark-grey: #191D2B;
+    --border-color: #2e344e;
+    --background-light-color: #F1F1F1;
+    --background-light-color-2: rgba(3, 127, 255, 0.3);
+    --white-color: #FFF;
+    --font-light-color: #a4acc4;
+    --font-dark-color: #313131;
+    --font-dark-color-2: #151515;
+    --sidebar-dark-color: #191D2B;
+    --scrollbar-bg-color: #383838;
+    --scrollbar-thumb-color: #6b6b6b;
+    --scrollbar-width: 12px;
+    --gradient-color: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(3, 127, 255, 1) 100%);
+    --body-color: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.section {
+    padding: 6rem 0 2rem; /* Increased top padding to prevent navbar overlap */
+}
+
+.container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    background: var(--gradient-color);
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn a {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: var(--secondary-color);
+}
+
+img,
+video {
+    width: 100%;
+    height: auto;
+}
+
+input {
+    font-size: 100%;
+}
+
+body {
+    background: var(--body-color);
+}
+
+/* Fix Navbar Overlapping */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white-color);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.466);
+}
+
+/* Ensure Sections Start Below Navbar */
+.home {
+    padding-top: 6rem; /* Push content below fixed navbar */
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+        width: 80% !important;
+        margin: auto !important;
+    }
+
+    .section {
+        padding: 8rem 0 4rem; /* Further spacing for clarity */
+    }
+}
+
+@media screen and (min-width: 2560px) {
+    body {
+        zoom: 1.7;
+    }
+}

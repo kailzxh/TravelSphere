@@ -1,0 +1,453 @@
+/* :root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-dark-color: #10121A;
+  --white-color: #FFF;
+  --font-dark-color: #313131;
+  --gradient-color: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(3, 127, 255, 1) 100%);
+  --white-color-deam: rgba(255, 255, 255, 0.9);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--white-color);
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white-color-deam);
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.466);
+}
+
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logo .icon {
+  font-size: 25px;
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+
+.navBar {
+  display: flex;
+  align-items: center;
+}
+
+
+.navLists {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navItem a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--font-dark-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.navItem a:hover {
+  color: var(--primary-color);
+}
+
+
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--gradient-color);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn a {
+  color: var(--white-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+
+.toggleNavbar {
+  display: none;
+  cursor: pointer;
+}
+
+.toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.toggleNavbar:hover .icon {
+  color: var(--secondary-color);
+}
+
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: var(--white-color-deam);
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    padding-top: 3rem;
+  }
+  
+  .activeNavbar {
+    right: 0;
+  }
+  .navLists {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .navItem {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .btn {
+    margin-top: 1rem;
+  }
+  .btn a {
+    font-weight: 600;
+    color: var(--white-color);
+  }
+  
+  .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+  }
+  .closeNavbar:hover {
+    color: var(--secondary-color);
+  }
+  .toggleNavbar {
+    display: block;
+  }
+}
+
+
+
+@media screen and (min-width:769px){
+  .toggleNavbar,.closeNavbar{
+    display: none;
+  }
+
+
+  .header{
+    padding: 1.5rem 2rem;
+    .navBar{
+      .navLists{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row
+        
+        
+        ;
+
+        .navItem{
+          .navLink{
+            color: var(--textColor);
+            padding: 0 0.45rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+
+            &:hover{
+              color: var(--PrimaryColor);
+            }
+
+            
+          }
+        }
+
+        .btn{
+          margin-left: 1rem;
+          a{
+            color: var(--white-color);
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media  screen and (min-width:960px) {
+  .header{
+    .navBar{
+      .navLists{
+        .navItem{
+          padding: 0 0.7rem;
+        }
+      }
+    }
+  }
+  
+} */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-dark-color: #10121A;
+  --white-color: #FFF;
+  --font-dark-color: #313131;
+  --gradient-color: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(3, 127, 255, 1) 100%);
+  --white-color-deam: rgba(255, 255, 255, 0.9);
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Fix: Add padding so content doesn't overlap the navbar */
+body {
+  background: var(--white-color);
+  padding-top: 80px; /* Adjusted to match the navbar height */
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--white-color-deam);
+  width: 100%;
+  height: 80px; /* Fixed height for consistency */
+  padding: 1rem 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.466);
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logo .icon {
+  font-size: 25px;
+  color: var(--primary-color);
+  margin-right: 5px;
+}
+
+/* Navbar */
+.navBar {
+  display: flex;
+  align-items: center;
+}
+
+/* Desktop Navigation */
+.navLists {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.navItem a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--font-dark-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.navItem a:hover {
+  color: var(--primary-color);
+}
+
+/* Button */
+.btn {
+  padding: 0.6rem 1.5rem;
+  background: var(--gradient-color);
+  border-radius: 3rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn a {
+  color: var(--white-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+/* Mobile Navigation */
+.toggleNavbar {
+  display: none;
+  cursor: pointer;
+}
+
+.toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--primary-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.toggleNavbar:hover .icon {
+  color: var(--secondary-color);
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 100px; /* Adjust padding for mobile */
+  }
+
+  .navBar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: var(--white-color-deam);
+    box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    padding-top: 3rem;
+  }
+
+  /* Open state */
+  .activeNavbar {
+    right: 0;
+  }
+
+  .navLists {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .navItem {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .btn {
+    margin-top: 1rem;
+  }
+
+  .btn a {
+    font-weight: 600;
+    color: var(--white-color);
+  }
+
+  /* Close Navbar Button */
+  .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: color 0.3s ease-in-out;
+  }
+
+  .closeNavbar:hover {
+    color: var(--secondary-color);
+  }
+
+  .toggleNavbar {
+    display: block;
+  }
+}
+
+/* Adjustments for Larger Screens */
+@media screen and (min-width: 769px) {
+  .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+
+  .header {
+    padding: 1.5rem 2rem;
+  }
+
+  .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .navItem .navLink {
+    color: var(--font-dark-color);
+    padding: 0 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .navItem .navLink:hover {
+    color: var(--primary-color);
+  }
+
+  .btn {
+    margin-left: 1rem;
+  }
+
+  .btn a {
+    color: var(--white-color);
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .header .navBar .navLists .navItem {
+    padding: 0 0.7rem;
+  }
+}
