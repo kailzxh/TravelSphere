@@ -18,7 +18,7 @@ const Navbar = () => {
           <a href="#" className="logo flex">
             <h1>
               <MdOutlineTravelExplore className="icon" />
-              Life
+              lifeistravel
             </h1>
           </a>
         </div>
